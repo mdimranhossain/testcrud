@@ -16,7 +16,7 @@ jobs:
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mysql:9.4
+      - image: circleci/mysql:9.4
 
     steps:
       - checkout
@@ -26,7 +26,7 @@ jobs:
             sudo apt-get update
             sudo apt-get install -y libzip-dev
             sudo apt-get install -y zlib1g-dev libicu-dev g++
-            sudo apt-get install mysql-client
+            # sudo apt-get install mysql-client
             sudo apt-get -y install mysql-server
       - run:
           name: Install PHP exts
